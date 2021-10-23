@@ -1,9 +1,8 @@
 import * as React from "react";
+import AppComp from "./components/App";
 function App() {
   return (
-    <div className="App">
-      hello
-    </div>
+    <AppComp/>
   );
 }
 
