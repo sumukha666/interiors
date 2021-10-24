@@ -4,7 +4,7 @@ module.exports = {
     commonjs: true, // CommonJS global variables and CommonJS scoping.Allows require, exports and module.
     es6: true, // Enable all ECMAScript 6 features except for modules.
     jest: true, // Jest global variables like `it` etc.
-    node: true // Defines things like process.env when generating through node
+    node: true, // Defines things like process.env when generating through node
   },
   extends: [
     "eslint:recommended",
@@ -12,45 +12,37 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jest/recommended",
-    "plugin:testing-library/react"
+    "plugin:testing-library/react",
+    "plugin:prettier/recommended",
   ],
   parser: "babel-eslint", // Uses babel-eslint transforms.
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: "module" // Allows for the use of imports
+    sourceType: "module", // Allows for the use of imports
   },
-  plugins: ["import" // eslint-plugin-import plugin. https://www.npmjs.com/package/eslint-plugin-import
-  ],
+  plugins: ["import"],
   root: true, // For configuration cascading.
-  rules: { 
-    indent: [
-      "error",
-      2
-    ],"max-len": [
+  rules: {
+    indent: ["error", 2],
+    "max-len": [
       "warn",
       {
-        code: 120
-      }
+        code: 120,
+      },
     ],
     "no-console": "warn",
     "no-duplicate-imports": "warn",
-    quotes: [
-      "warn",
-      "double"
-    ],
+    quotes: ["warn", "double"],
     "eol-last": ["warn", "always"],
     "no-unused-vars": "warn",
-    "object-curly-spacing": [
-      "warn",
-      "always"
-    ],
+    "object-curly-spacing": ["warn", "always"],
   },
   settings: {
     react: {
-      version: "detect" // Detect react version
-    }
-  }
+      version: "detect", // Detect react version
+    },
+  },
 };
