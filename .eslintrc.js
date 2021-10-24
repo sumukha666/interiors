@@ -41,6 +41,7 @@ module.exports = {
       "warn",
       "double"
     ],
+    "eol-last": ["warn", "always"],
     "no-unused-vars": "warn",
     "object-curly-spacing": [
       "warn",
